@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reto técnico - Matrices</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Reto técnico</p>
+      <h1>Procesamiento de matrices</h1>
+      <p>Envía una matriz a Go para rotarla o calcular su factorización QR.</p>
+    </section>
+
+    <section class="card">
+      <form id="matrix-form">
+        <label for="operation">Operación</label>
+        <select id="operation" name="operation">
+          <option value="rotate">Rotar 90° a la derecha</option>
+          <option value="qr">Factorización QR</option>
+        </select>
+
+        <label for="matrix">Matriz en formato JSON</label>
+        <textarea id="matrix" name="matrix" rows="6" spellcheck="false">[[1, 2, 3], [4, 5, 6]]</textarea>
+        <button type="submit">Procesar matriz</button>
+      </form>
+    </section>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section id="results" class="results" hidden>
+      <article class="card">
+        <h2>Matriz transformada</h2>
+        <pre id="matrices-output"></pre>
+      </article>
+      <article class="card">
+        <h2>Estadísticas</h2>
+        <pre id="statistics-output"></pre>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
